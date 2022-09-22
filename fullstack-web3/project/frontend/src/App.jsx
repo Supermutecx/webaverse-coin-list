@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown, Button } from "react-bootstrap";
 import CoinList from "./components";
 import config from "./config/app";
 
 function App() {
   const [currency, setCurrency] = useState(config.currencyList[0]);
+  const [sortMode, setSortMode] = useState("RANK");
 
   return (
     <Container className="mt-5">
@@ -25,9 +26,15 @@ function App() {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
+          <Button variant="primary" className="mx-2" onClick={() => { setSortMode("NAME"); }}>
+            Order By Name
+          </Button>
+          <Button variant="primary" className="mx-2" onClick={() => { setSortMode("RANK"); }}>
+            Order By Rank
+          </Button>
         </Container>
       </Navbar>
-      <CoinList></CoinList>
+      <CoinList currency={currency} mode={sortMode}/>
     </Container>
   );
 }
