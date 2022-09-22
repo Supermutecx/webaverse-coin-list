@@ -4,26 +4,14 @@
     "description": "basic setup for node api, using express js",
     "main": "index.js",
     "scripts": {
-        "test": "jest",
-        "start": "nodemon server.js",
-        "prepare": "husky install"
+        "start": "nodemon server.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/msamgan/expressjs-api-boilerplate.git"
-    },
-    "homepage": "https://create-express-boilerplate.com/",
-    "author": "msamgan",
+    "author": "muranox.eth",
     "contributors": [
         {
-            "email": "mohdsamgankhan@gmail.com",
-            "name": "Mohd Samgan Khan",
-            "url": "https://github.com/msamgan"
-        },
-        {
-            "email": "Qeshta.w.huda@gmail.com",
-            "name": "Huda Qeshta",
-            "url": "https://github.com/hudaQeshta"
+            "email": "naokimuarno@outlook.com",
+            "name": "muranox.eth",
+            "url": "https://github.com/muranox"
         }
     ],
     "license": "ISC",
