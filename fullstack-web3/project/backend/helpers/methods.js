@@ -4,11 +4,11 @@
  * @param payload
  * @returns {{package, message, status: boolean}}
  */
-exports.successResponse = (message, payload) => {
+exports.successResponse = (message, data) => {
     return {
         status: true,
-        message: message,
-        package: payload
+        message,
+        data
     }
 }
 
@@ -18,14 +18,10 @@ exports.successResponse = (message, payload) => {
  * @param payload
  * @returns {{message, status: boolean}}
  */
-exports.failResponse = (message, payload = null) => {
+exports.failResponse = (message) => {
     let response = {
         status: false,
-        message: message
-    }
-
-    if (payload) {
-        response.payload = payload
+        message
     }
 
     return response
