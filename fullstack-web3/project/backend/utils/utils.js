@@ -8,7 +8,7 @@ const fetchBestExchange = async (coinId, currency) => {
 
     try {
         const apiResp = await axios.get(apiUrl);
-        const sortedData = apiResp.data.sort((c1, c2) => c1.price > c2.price);
+        const sortedData = apiResp.data.sort((c1, c2) => c1.price > c2.price ? 1 : -1);
         return {
             "exchange": sortedData[0].exchange
         };

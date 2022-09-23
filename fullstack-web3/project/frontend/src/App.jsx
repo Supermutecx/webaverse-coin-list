@@ -8,11 +8,11 @@ function App() {
   const [sortMode, setSortMode] = useState("RANK");
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 bg-dark">
       <Navbar variant="dark" bg="dark" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#home">Currency :</Navbar.Brand>
-          <Navbar.Collapse id="navbar-dark-example">
+          <Navbar.Collapse>
             <Nav>
               <NavDropdown
                 title={currency}
